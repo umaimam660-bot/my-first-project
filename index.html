@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Umaima | Frontend Developer</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <style>
+    .glow-text {
+      font-size: 4rem;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff00ff; }
+      to { text-shadow: 0 0 30px #00ffff; }
+    }
+
+    @media (max-width: 600px) {
+      .glow-text {
+        font-size: 2.5rem;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- Home -->
+  <section class="h-screen flex flex-col justify-center items-center bg-gradient-to-r from-purple-500 to-indigo-600 text-white text-center px-4">
+    <h1 class="glow-text">Hi, I'm Umaima</h1>
+    <p class="mt-4 text-xl" id="tagline"></p>
+
+    <a href="#projects" class="mt-6 px-6 py-3 bg-white text-purple-600 rounded-lg shadow hover:bg-gray-200">
+      View My Work
+    </a>
+  </section>
+
+  <!-- About -->
+  <section class="py-20 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-6">About Me</h2>
+    <p class="max-w-2xl mx-auto">
+      I specialize in building modern, responsive websites using HTML, CSS, JavaScript, and TailwindCSS. I help clients create clean and professional web solutions.
+    </p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20 px-6 bg-gray-200">
+    <h2 class="text-3xl font-bold text-center mb-10">My Projects</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- Project 1 -->
+      <div class="bg-white p-6 rounded-lg shadow hover:scale-105 transition">
+        <h3 class="text-xl font-semibold">Restaurant Website 🍽️</h3>
+        <p class="mt-2">Modern responsive restaurant website design.</p>
+
+        <a href="https://github.com/yourusername/restaurant-website" 
+           class="text-purple-600 mt-4 inline-block">
+           🔗 Live Demo
+        </a>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="bg-white p-6 rounded-lg shadow hover:scale-105 transition">
+        <h3 class="text-xl font-semibold">Clicker Game 🎮</h3>
+        <p class="mt-2">Simple JavaScript clicker game with score system.</p>
+
+        <a href="https://github.com/yourusername/clicker-game" 
+           class="text-purple-600 mt-4 inline-block">
+           🔗 Live Demo
+        </a>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="bg-white p-6 rounded-lg shadow hover:scale-105 transition">
+        <h3 class="text-xl font-semibold">Portfolio Website 🌐</h3>
+        <p class="mt-2">Personal portfolio website for Fiverr clients.</p>
+
+        <a href="https://github.com/yourusername/portfolio" 
+           class="text-purple-600 mt-4 inline-block">
+           🔗 Live Demo
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
+    <p>Want to work together? Reach out below 👇</p>
+
+    <!-- Fiverr -->
+    <a href="https://www.fiverr.com/umaimamalik2007"
+       class="mt-6 px-8 py-4 bg-green-500 text-white rounded-lg shadow-lg hover:bg-green-600 inline-block">
+       💼 Hire Me on Fiverr
+    </a>
+
+    <!-- Email -->
+    <a href="mailto:umaimam660.com"
+       class="mt-4 ml-4 px-8 py-4 bg-purple-600 text-white rounded-lg shadow-lg hover:bg-purple-700 inline-block">
+       📧 Email Me
+    </a>
+  </section>
+
+  <!-- JS -->
+  <script>
+    const text = "Frontend Developer | Fiverr Freelancer";
+    let i = 0;
+    const speed = 100;
+    const el = document.getElementById("tagline");
+
+    function type() {
+      if (i < text.length) {
+        el.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, speed);
+      }
+    }
+    type();
+  </script>
+
+</body>
+</html>
+
+  
